@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@source "../../src";
+
+@theme {
+  --color-bg: #0a0a0f;
+  --color-bg-card: #12121a;
+  --color-bg-card-hover: #1a1a25;
+  --color-bg-input: #0e0e16;
+  --color-border: #1e1e2e;
+  --color-border-bright: #2a2a3e;
+  --color-text: #e4e4ef;
+  --color-text-muted: #6b6b80;
+  --color-text-dim: #44445a;
+  --color-accent: #6366f1;
+  --color-accent-hover: #818cf8;
+  --color-green: #22c55e;
+  --color-green-dim: #16a34a;
+  --color-red: #ef4444;
+  --color-yellow: #eab308;
+  --color-cyan: #06b6d4;
+  --color-orange: #f97316;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-bright);
+  border-radius: 3px;
+}
+
+/* Pulse animation for active step */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+
+/* Step slide-in */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out forwards;
+}
+
+/* Glow effect for CTA */
+.glow {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+.glow:hover {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+}
