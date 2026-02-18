@@ -15,7 +15,8 @@ export async function executeLive(
 
   try {
     // Dynamic import — these are optional deps
-    const { PincerPayAgent } = await import("@pincerpay/agent");
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { PincerPayAgent } = await import(/* webpackIgnore: true */ "@pincerpay/agent" as string);
 
     steps.push({
       id: "step-1",
