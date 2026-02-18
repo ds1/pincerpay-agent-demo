@@ -1,5 +1,7 @@
 # PincerPay Agent Demo
 
+**[demo.pincerpay.com](https://demo.pincerpay.com)**
+
 Interactive playground and CLI demo showing the **agent developer experience** — what it looks like for an AI agent to discover, pay for, and consume a paid API using the [x402 protocol](https://github.com/coinbase/x402) and [PincerPay](https://pincerpay.com).
 
 ## Why This Exists
@@ -19,7 +21,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) and click **Open Playground**.
+Open [http://localhost:3000](http://localhost:3000) and click **Open Playground**, or try the [Guided Demo](https://demo.pincerpay.com/playground?tour=1) to walk through the full flow with narration.
 
 ## What the Demo Shows
 
@@ -182,6 +184,7 @@ const data = await agent.fetch("https://api.example.com/weather");
 
 ## Links
 
+- [Live Demo](https://demo.pincerpay.com) — Try the playground and guided tour
 - [PincerPay](https://pincerpay.com) — Main project + merchant dashboard
 - [x402 Protocol](https://github.com/coinbase/x402) — HTTP 402 payment standard by Coinbase
 - [Solana](https://solana.com) — Primary settlement chain
