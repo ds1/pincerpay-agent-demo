@@ -9,17 +9,18 @@ interface ResponsePanelProps {
 export function ResponsePanel({ response, cost, totalTime }: ResponsePanelProps) {
   if (!response) {
     return (
-      <div className="rounded-xl border border-border bg-bg-card p-4">
+      <div data-tour="response-panel" className="rounded-xl border border-border bg-bg-card p-4">
         <h3 className="mb-4 text-sm font-semibold text-text">Response</h3>
         <div className="py-8 text-center text-sm text-text-dim">
-          Select an endpoint and send a request
+          No response yet<br />
+          <span className="text-text-dim/60">API response data will appear here</span>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="rounded-xl border border-border bg-bg-card p-4">
+    <div data-tour="response-panel" className="rounded-xl border border-border bg-bg-card p-4">
       <div className="mb-3 flex items-center justify-between">
         <h3 className="text-sm font-semibold text-text">Response</h3>
         <div className="flex items-center gap-2">

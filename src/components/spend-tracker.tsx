@@ -13,8 +13,11 @@ export function SpendTracker({ totalSpent, dailyLimit, transactions }: SpendTrac
   const isNearLimit = percentage > 80;
 
   return (
-    <div className="rounded-xl border border-border bg-bg-card p-4">
-      <h3 className="mb-3 text-sm font-semibold text-text">Spend Tracker</h3>
+    <div data-tour="spend-tracker" className="rounded-xl border border-border bg-bg-card p-4">
+      <div className="mb-3">
+        <h3 className="text-sm font-semibold text-text">Spend Tracker</h3>
+        <p className="text-[11px] text-text-dim">Real-time budget usage for this session</p>
+      </div>
 
       {/* Progress bar */}
       <div className="mb-2">
@@ -36,7 +39,7 @@ export function SpendTracker({ totalSpent, dailyLimit, transactions }: SpendTrac
       </div>
 
       {/* Per-request breakdown */}
-      {transactions.length > 0 && (
+      {transactions.length > 0 ? (
         <div className="space-y-1">
           {transactions.slice(-5).map((tx, i) => (
             <div key={i} className="flex items-center justify-between text-xs">
@@ -45,6 +48,8 @@ export function SpendTracker({ totalSpent, dailyLimit, transactions }: SpendTrac
             </div>
           ))}
         </div>
+      ) : (
+        <div className="text-center text-xs text-text-dim">No transactions yet</div>
       )}
     </div>
   );

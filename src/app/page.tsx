@@ -17,21 +17,39 @@ export default function Home() {
           micropayments. No card rails, no 3% fees — just instant on-chain
           settlement via the x402 protocol.
         </p>
-        <a
-          href="/playground"
-          className="glow inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-medium text-white transition-colors hover:bg-accent-hover"
-        >
-          Open Playground
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
+        <div className="flex items-center justify-center gap-3">
+          <a
+            href="/playground"
+            className="glow inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-medium text-white transition-colors hover:bg-accent-hover"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
+            Open Playground
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a
+            href="/playground?tour=1"
+            className="inline-flex items-center gap-2 rounded-lg border border-border-bright px-6 py-3 font-medium text-text-muted transition-colors hover:border-accent hover:text-accent"
+          >
+            Guided Demo
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </a>
+        </div>
       </section>
 
       {/* How It Works */}
@@ -173,21 +191,29 @@ export default function Home() {
 
       {/* CTA */}
       <section className="text-center">
-        <a
-          href="/playground"
-          className="glow inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3.5 text-lg font-medium text-white transition-colors hover:bg-accent-hover"
-        >
-          Try It Now
-          <svg
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
+        <div className="flex items-center justify-center gap-3">
+          <a
+            href="/playground"
+            className="glow inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3.5 text-lg font-medium text-white transition-colors hover:bg-accent-hover"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
+            Try It Now
+            <svg
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <a
+            href="/playground?tour=1"
+            className="inline-flex items-center gap-2 rounded-lg border border-border-bright px-8 py-3.5 text-lg font-medium text-text-muted transition-colors hover:border-accent hover:text-accent"
+          >
+            Guided Demo
+          </a>
+        </div>
       </section>
     </main>
   );

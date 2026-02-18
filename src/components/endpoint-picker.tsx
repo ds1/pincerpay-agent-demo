@@ -18,8 +18,11 @@ export function EndpointPicker({
   isExecuting,
 }: EndpointPickerProps) {
   return (
-    <div className="space-y-3">
-      <h3 className="text-sm font-semibold text-text">Merchant Endpoints</h3>
+    <div data-tour="endpoint-picker" className="space-y-3">
+      <div>
+        <h3 className="text-sm font-semibold text-text">Merchant Endpoints</h3>
+        <p className="text-[11px] text-text-dim">APIs with per-request pricing via x402</p>
+      </div>
       <div className="space-y-2">
         {endpoints.map((ep) => {
           const isSelected = selected?.path === ep.path;
@@ -48,6 +51,7 @@ export function EndpointPicker({
         })}
       </div>
       <button
+        data-tour="send-button"
         onClick={onExecute}
         disabled={!selected || isExecuting}
         className="w-full rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-40"

@@ -24,9 +24,12 @@ export function AgentConfigPanel({ config, onChange, isLive }: AgentConfigPanelP
   }
 
   return (
-    <div className="rounded-xl border border-border bg-bg-card p-4">
+    <div data-tour="agent-config" className="rounded-xl border border-border bg-bg-card p-4">
       <div className="mb-4 flex items-center justify-between">
-        <h3 className="text-sm font-semibold text-text">Agent Configuration</h3>
+        <div>
+          <h3 className="text-sm font-semibold text-text">Agent Configuration</h3>
+          <p className="text-[11px] text-text-dim">On-chain identity and spending guardrails</p>
+        </div>
         <span
           className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${
             isLive
@@ -81,7 +84,7 @@ export function AgentConfigPanel({ config, onChange, isLive }: AgentConfigPanelP
       </div>
 
       {/* Spending Limits */}
-      <div className="grid grid-cols-2 gap-3">
+      <div data-tour="spending-limits" className="grid grid-cols-2 gap-3">
         <div>
           <label className="mb-1.5 block text-xs text-text-muted">Max / Request</label>
           <div className="relative">

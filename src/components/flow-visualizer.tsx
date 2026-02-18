@@ -43,12 +43,13 @@ function StepIcon({ status, type }: { status: FlowStep["status"]; type: FlowStep
 
 export function FlowVisualizer({ steps, transactionLog }: FlowVisualizerProps) {
   return (
-    <div className="rounded-xl border border-border bg-bg-card p-4">
+    <div data-tour="flow-visualizer" className="rounded-xl border border-border bg-bg-card p-4">
       <h3 className="mb-4 text-sm font-semibold text-text">x402 Payment Flow</h3>
 
       {steps.length === 0 ? (
         <div className="py-8 text-center text-sm text-text-dim">
-          Send a request to see the payment flow
+          Waiting for a request&hellip;<br />
+          <span className="text-text-dim/60">The 6-step x402 payment flow will appear here</span>
         </div>
       ) : (
         <div className="space-y-1">

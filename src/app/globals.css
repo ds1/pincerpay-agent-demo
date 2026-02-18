@@ -78,3 +78,37 @@ body {
 .glow:hover {
   box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
 }
+
+/* Tour animations */
+@keyframes tour-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tour-fade-in {
+  animation: tour-fade-in 0.25s ease-out forwards;
+}
+
+@keyframes tour-tooltip-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.tour-tooltip-in {
+  animation: tour-tooltip-in 0.25s ease-out forwards;
+}
+
+@keyframes tour-ring-pulse {
+  0%, 100% { box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(99, 102, 241, 0.4); }
+  50% { box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6), 0 0 0 4px rgba(99, 102, 241, 0.2); }
+}
+
+.tour-ring-pulse {
+  animation: tour-ring-pulse 2s ease-in-out infinite;
+}
