@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
+import { Nunito_Sans } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
+
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  variable: "--font-nunito-sans",
+});
 
 export const metadata: Metadata = {
   title: "PincerPay Agent Demo",
@@ -13,14 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className="min-h-screen antialiased">
+    <html lang="en" className={`dark ${nunitoSans.variable}`}>
+      <body className={`min-h-screen antialiased ${nunitoSans.className}`}>
         <header className="border-b border-border px-6 py-4">
           <div className="mx-auto flex max-w-7xl items-center justify-between">
             <a href="/" className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-sm font-bold text-white">
-                P
-              </div>
+              <Image src="/pincerpay_logo.png" alt="PincerPay" width={32} height={32} />
               <span className="text-lg font-semibold text-text">
                 PincerPay <span className="font-normal text-text-muted">Agent Demo</span>
               </span>

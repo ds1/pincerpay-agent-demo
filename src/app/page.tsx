@@ -8,7 +8,7 @@ export default function Home() {
         </div>
         <h1 className="mb-4 text-5xl font-bold tracking-tight text-text">
           Build Agents That{" "}
-          <span className="bg-gradient-to-r from-accent to-cyan bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-accent to-yellow bg-clip-text text-transparent">
             Pay for APIs
           </span>
         </h1>

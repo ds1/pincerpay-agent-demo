@@ -116,7 +116,7 @@ async function simulateRequest(
   signSpinner.succeed(chalk.dim("Payment signed"));
 
   // Step 4: Verify + Settle
-  const settleSpinner = ora({ text: "Facilitator verifying...", color: "magenta" }).start();
+  const settleSpinner = ora({ text: "Facilitator verifying...", color: "yellow" }).start();
   await sleep(400);
   settleSpinner.succeed(
     chalk.green(`Payment settled — tx ${truncate(txHash, 16)}`)
@@ -153,7 +153,7 @@ async function main() {
 
   console.log();
   console.log(chalk.bold.white("  ╔══════════════════════════════════════╗"));
-  console.log(chalk.bold.white("  ║  ") + chalk.bold.magenta("PincerPay Agent Demo") + chalk.bold.white("              ║"));
+  console.log(chalk.bold.white("  ║  ") + chalk.bold.hex("#F97316")("PincerPay Agent Demo") + chalk.bold.white("              ║"));
   console.log(chalk.bold.white("  ║  ") + chalk.dim("x402 Protocol · USDC · Solana") + chalk.bold.white("    ║"));
   console.log(chalk.bold.white("  ╚══════════════════════════════════════╝"));
   console.log();
